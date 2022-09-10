@@ -1,0 +1,15 @@
+.card {
+    width:5%;
+    border-radius: 5px;
+    margin: 2rem;
+    background:var(--color-white);
+  }
+  
+  .card img{
+    border-radius:10px;
+  }
+
+.categoryNameBox{
+    background-color: #edd497;
+    color:#353a18;
+}

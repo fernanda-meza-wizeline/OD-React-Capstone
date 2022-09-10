@@ -1,0 +1,19 @@
+.icon{
+    border: none;
+    background-color: transparent;
+    color: #aa4465;
+    font-size: x-large;
+    padding:0.5rem;
+}
+
+.image{
+    background-color: white;
+}
+
+.text{
+    border-radius: 5px;
+}
+
+.arrow{
+    border-radius: 100px;
+}
