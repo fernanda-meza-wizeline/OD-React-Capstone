@@ -13,3 +13,10 @@
     background-color: #edd497;
     color:#353a18;
 }
+.quickDescription{
+  width:20rem;
+  text-align: center;
+}
+.productName{
+  font-weight: 700;
+}

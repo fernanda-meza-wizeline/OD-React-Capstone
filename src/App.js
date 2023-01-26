@@ -1,4 +1,5 @@
 import './App.css';
+import logo from './logo.svg';
 import Header from './UI/headerComponent';
 import Footer from './UI/footerComponent';
 import Slider from './UI/slider/sliderComponent';
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header className="header" logo="./logo.svg"/>
+      <Header className="header" logo={logo}/>
       <Slider featured={FeaturedBanners} />
       <ProductCategories featured={Categories} />
       <FeaturedProducts products={Products} />

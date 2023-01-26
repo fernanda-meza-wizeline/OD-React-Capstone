@@ -14,11 +14,11 @@ export class Card extends React.Component{
         }else{
             card=(
                 <>
-                 <img src={this.props.imageUrl} alt={this.props.altText} className="productImage"/>
+                 <img src={this.props.imageUrl} alt={this.props.altText} className="productImage" width={this.props.width} height={this.props.height}/>
                 <div className="quickDescription">
-                <span className="productName">{this.props.productName}</span>
-                <span className="productPrice">{this.props.productPrice}</span>
-                <span className="productCategory">{this.props.productCategory}</span>
+                <div className="productName">{this.props.productName}</div>
+                <div className="productPrice">{this.props.productPrice}</div>
+                <div className="productCategory">{this.props.productCategory}</div>
             </div>
                 </>
             );
