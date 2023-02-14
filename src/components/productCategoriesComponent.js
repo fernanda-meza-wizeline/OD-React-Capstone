@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel from './Elements/cardCarouselComponent.js';
+import Carousel from '../components/ui/cardCarouselComponent';
 
 const ProductCategories = (props) => {
 

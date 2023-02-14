@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import {Card} from "./cardComponent";
-import "./carousel.css";
+import "../../assets/carousel.css";
 
 
 const Carousel = (props) => {

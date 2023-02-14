@@ -1,5 +1,5 @@
 import React from "react";
-import "./cardComponent.css";
+import "../../assets/cardComponent.css";
 export class Card extends React.Component{
     render(){
         var card=(<></>);
@@ -17,7 +17,7 @@ export class Card extends React.Component{
                  <img src={this.props.imageUrl} alt={this.props.altText} className="productImage" width={this.props.width} height={this.props.height}/>
                 <div className="quickDescription">
                 <div className="productName">{this.props.productName}</div>
-                <div className="productPrice">{this.props.productPrice}</div>
+                <div className="productPrice">$ {this.props.productPrice}</div>
                 <div className="productCategory">{this.props.productCategory}</div>
             </div>
                 </>

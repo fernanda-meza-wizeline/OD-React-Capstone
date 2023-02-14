@@ -1,5 +1,5 @@
 import React from "react";
-import './buttonComponent.css';
+import '../../assets/buttonComponent.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export class Button extends React.Component{
    

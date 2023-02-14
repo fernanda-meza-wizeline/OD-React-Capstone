@@ -1,6 +1,6 @@
 import React from 'react';
-import {Card} from './Elements/cardComponent.js';
-import "./featuredProductComponent.css";
+import {Card} from './ui/cardComponent';
+import "../assets/featuredProductComponent.css";
 
 const FeaturedProducts = (props) => {
     const products=props.products.results;

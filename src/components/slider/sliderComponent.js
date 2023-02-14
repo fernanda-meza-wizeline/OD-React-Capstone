@@ -4,17 +4,17 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import Slide from './slideComponent.js';
-import './slide.css';
+import '../../assets/slide.css';
 
 const Slider=(props)=>{ 
     const[activeIndex,setActiveIndex]=useState(0);
     
-    var featured=props.featured.results;
+    var featured=props.featured?props.featured.results:props.categories.results;
     var results=[];
     var dots=[];
     
     featured.forEach((banner,index)=>{
-        results.push(<Slide key ={index+banner.id}  title={banner.data.title} description={banner.data.description[0].text} imageUrl={banner.data.main_image.url} />);
+        results.push(<Slide class={props.featured?"featured":"category"} key ={index+banner.id}  title={banner.data.title?banner.data.title:banner.data.name} description={banner.data.description?banner.data.description[0].text:""} imageUrl={banner.data.main_image.url} />);
         dots.push(
             <button key ={index} className={`${index===activeIndex?"active":"inactive"}`} onClick={()=>{updateIndex(index);}}><FontAwesomeIcon icon={faCircle} /></button>
         );
@@ -31,7 +31,7 @@ const Slider=(props)=>{
     
    return(    <>
             <div className="slider">
-                <div className="inner" style={{transform:`translateX(-${activeIndex*100}%)`}}>
+                <div className="inner" style={{transform:`translateX(-${activeIndex*(props.featured?100:30)}%)`}}>
                     {results}
                 </div>
             </div>

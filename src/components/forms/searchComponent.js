@@ -1,6 +1,6 @@
 import React from "react";
-import {Button} from './buttonComponent.js'
-import './searchComponent.css';
+import {Button} from '../ui/buttonComponent'
+import '../../assets/searchComponent.css';
 export class Search extends React.Component{
     render(){
         return(
