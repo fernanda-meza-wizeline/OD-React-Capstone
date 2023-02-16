@@ -7,7 +7,7 @@ class Header extends React.Component{
     render(){
         return (
             <header>
-                    <Button className="icon" image={this.props.logo}/>
+                    <Button className="image" image={this.props.logo} />
                     <Search sIcon={faMagnifyingGlass}/>              
                     <Button className="icon" icon={faCartShopping}/>
             </header>

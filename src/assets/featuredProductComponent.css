@@ -1,6 +1,35 @@
 .featuredProducts{
     display:inline-block;
     width:100%;
+    min-height: 35vh;
+    white-space:normal;
+    overflow-x: hidden;
+    margin-top:-10px;
+}
+
+.parent{
+    display: grid;
+    margin-left:-1rem;
+    margin-right: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+.productImage{
+    width:150px;
+    height:150px;
+}
+h1{
+    font-size: large;
+}
+@media only screen and (min-width: 1024px) {
+    h1{
+        font-size: x-large;
+    }
+    .productImage{
+        width:300px;
+    }
+.featuredProducts{
+    display:inline-block;
+    width:100%;
     margin:0;
     min-height: 75vh;
     white-space:normal;
@@ -15,4 +44,5 @@
     margin-block: 2rem;
     padding: 0 1rem;
   
+}
 }

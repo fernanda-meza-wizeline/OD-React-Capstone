@@ -1,9 +1,8 @@
 import './App.css';
-import logo from './logo.svg';
+import  Logo from './assets/logo.svg';
 import Header from './components/headerComponent';
 import Footer from './components/footerComponent';
 import Slider from './components/slider/sliderComponent';
-import ProductCategories from './components/productCategoriesComponent';
 import FeaturedBanners from './mocks/en-us/featured-banners.json';
 import FeaturedProducts from './components/featuredProductsComponent';
 import Categories from './mocks/en-us/product-categories.json';
@@ -15,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header className="header" logo={logo}/>
+      <Header className="header" logo={Logo}/>
       <Slider featured={FeaturedBanners} />
       <Slider categories={Categories} />
       <FeaturedProducts products={Products} />

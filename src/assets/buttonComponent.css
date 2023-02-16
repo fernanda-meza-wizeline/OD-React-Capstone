@@ -7,9 +7,13 @@
 }
 
 .image{
-    background-color: white;
+    border: none;
+    background-color: transparent;
 }
 
+.image img{
+    height: 30px;
+}
 .text{
     border-radius: 5px;
 }

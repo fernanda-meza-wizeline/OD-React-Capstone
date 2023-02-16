@@ -1,14 +1,99 @@
+
 .slider{
     margin-top: 1rem;
     margin-bottom: 1rem;
     overflow:hidden;
 }
 .featured{
-    display:inline-flex;
-    align-items: center;
+    display:inline-flex; 
     justify-content: center;
     width:100%
 }
+.featuredSlideImage{
+    width: 90%;
+ }
+ 
+ .featuredSlideTitle{
+     font-size: small;
+    font-weight: 700;
+    text-align: left;
+     margin-left: -0.6rem;
+     color:bisque;
+ }
+ 
+ .featuredSlideDescription{
+     font-size: x-small;
+    margin-top: -0.rem;
+     position:relative;
+     text-align: justify;
+     color:bisque;
+ }
+ 
+ .featuredBlock{
+     position: absolute;
+     top: 0rem;
+     width:35%;
+     height: 97%;
+     margin-left: 55%;
+     background-color: #8f5c38;
+     padding-left: 5px;
+     white-space: normal;
+ }
+ 
+ /*Categories style*/
+ 
+ 
+ .category{
+     display:inline-flex;
+     align-items: center;
+     justify-content: center;
+     width:40%;
+     margin:2%;
+ }
+ .categorySlideImage{
+    width: 100%;
+    border-radius: 10%;
+ }
+ 
+ .categorySlideTitle{
+     font-size: large;
+     margin-top: 50%;
+     color:bisque;
+ }
+ 
+ .categoryBlock{
+     position: absolute;
+     width:40%;
+     margin-top: 10rem;
+     height: 20%;
+     opacity:0.8;
+     transition: .5s ease;
+     background-color: #8f5c38;
+     white-space: normal;
+     border-radius: 10%;
+ }
+
+ 
+.arrows{
+width: 100%;
+position:relative;
+}
+
+.arrows button{
+border-radius: 100px;
+border:none;
+background-color: transparent;
+color:#353a18;
+
+}
+
+.arrows button.active{
+    color:#353a18;
+}
+.arrows button.inactive{
+    color:#a89b8c;
+}
+@media only screen and (min-width: 1024px) {
 .featuredSlideImage{
    width: 90%;
 }
@@ -75,29 +160,6 @@
     white-space: normal;
     border-radius: 10%;
 }
-.category:hover .categoryBlock{
-    opacity:0.8;
-}
+
 /* end style*/
-
-
-
-.arrows{
-width: 100%;
-position:relative;
-}
-
-.arrows button{
-border-radius: 100px;
-border:none;
-background-color: transparent;
-color:#353a18;
-
-}
-
-.arrows button.active{
-    color:#353a18;
-}
-.arrows button.inactive{
-    color:#a89b8c;
 }
