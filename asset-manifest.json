@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/OD-React-Capstone/static/css/main.e0b7f6d1.css",
+    "main.js": "/OD-React-Capstone/static/js/main.13b251fb.js",
+    "static/js/787.8626abe6.chunk.js": "/OD-React-Capstone/static/js/787.8626abe6.chunk.js",
+    "static/media/logo.svg": "/OD-React-Capstone/static/media/logo.d59dd747034709f043022c954e61a8d1.svg",
+    "index.html": "/OD-React-Capstone/index.html",
+    "main.e0b7f6d1.css.map": "/OD-React-Capstone/static/css/main.e0b7f6d1.css.map",
+    "main.13b251fb.js.map": "/OD-React-Capstone/static/js/main.13b251fb.js.map",
+    "787.8626abe6.chunk.js.map": "/OD-React-Capstone/static/js/787.8626abe6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0b7f6d1.css",
+    "static/js/main.13b251fb.js"
+  ]
+}
