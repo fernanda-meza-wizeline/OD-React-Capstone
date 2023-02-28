@@ -1,15 +1,26 @@
 import React from "react";
-import {Button} from '../ui/buttonComponent'
-import '../../assets/searchComponent.css';
-export class Search extends React.Component{
-    render(){
-        return(
-            <div>
-            <form>
-                <input type="search" className="inputSearch" id="search" name="search" placeholder= "Search"/>
-                <Button icon={this.props.sIcon} className='searchButton' />
-            </form>
-            </div>
-        );
-    }
-}
+import PropTypes from "prop-types";
+import  Button  from "../ui/buttonComponent";
+import "../../assets/searchComponent.css";
+
+const Search = ({sIcon}) => {
+  return (
+    <div>
+      <form>
+        <input
+          type="search"
+          className="inputSearch"
+          id="search"
+          name="search"
+          placeholder="Search"
+        />
+        <Button icon={sIcon} className="searchButton" />
+      </form>
+    </div>
+  );
+};
+
+Search.propTypes = {
+  sIcon: PropTypes.object,
+};
+export default Search;

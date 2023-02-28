@@ -1,14 +1,15 @@
 import React,{useState, useEffect} from "react";
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import {Card} from "./cardComponent";
+import Card from "./cardComponent";
 import "../../assets/carousel.css";
 
 
-const Carousel = (props) => {
+const Carousel = ({elements, cardType}) => {
     const [moveClass, setMoveClass] = useState('');
-    const [carouselItems, setCarouselItems] = useState(props.elements);
+    const [carouselItems, setCarouselItems] = useState(elements);
     
     useEffect(() => {
       document.documentElement.style.setProperty('--num', carouselItems.length);
@@ -24,7 +25,7 @@ const Carousel = (props) => {
     }
     
     const shiftPrev = (copy) => {
-      let lastcard = copy.pop();
+      const lastcard = copy.pop();
       copy.splice(0, 0, lastcard);
       setCarouselItems(copy);
     }
@@ -45,12 +46,18 @@ const Carousel = (props) => {
           </button>
         </div>
         <ul onAnimationEnd={handleAnimationEnd} className={`${moveClass} carousel`}>
-          {carouselItems.map((t, index) => 
-            <Card key={index} cardType={props.cardType} imageUrl={t.data.main_image.url} title={t.data.name}/>
+          {carouselItems.map((card, index) => 
+            <Card key={index} cardType={cardType} imageUrl={card.data.main_image.url} title={card.data.name}/>
           )}
         </ul>
       </div>
     )
   }
   
+  Carousel.propTypes = {
+    elements:PropTypes.object,
+    cardType: PropTypes.string
+  };
+
+
   export default Carousel;

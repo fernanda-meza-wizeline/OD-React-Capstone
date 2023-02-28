@@ -1,32 +1,51 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "../../assets/cardComponent.css";
-export class Card extends React.Component{
-    render(){
-        var card=(<></>);
-        if(this.props.cardType==="category"){
-            card=( 
-            <>
-            <img src={this.props.imageUrl} alt={this.props.altText} className="categoryImage"/>
-            <div className="categoryNameBox">
-            <h2>{this.props.title}</h2>
-            </div>
-            </>);
-        }else{
-            card=(
-                <>
-                 <img src={this.props.imageUrl} alt={this.props.altText} className="productImage" width={this.props.width} height={this.props.height}/>
-                <div className="quickDescription">
-                <div className="productName">{this.props.productName}</div>
-                <div className="productPrice">$ {this.props.productPrice}</div>
-                <div className="productCategory">{this.props.productCategory}</div>
-            </div>
-                </>
-            );
-        }
-        return(
-            <div className="card">
-                {card}
-            </div>            
-        )
-    }
-}
+
+const Card = ({cardType, imageUrl, altText, title, width, height, productName, productPrice, productCategory}) => {
+
+    if (cardType === "category") {
+      return(
+        <div className="card">
+          <img
+            src={imageUrl}
+            alt={altText}
+            className="categoryImage"
+          />
+          <div className="categoryNameBox">
+            <h2>{title}</h2>
+          </div>
+        </div>
+      );
+    } 
+      return(
+        <div className="card">
+          <img
+            src={imageUrl}
+            alt={altText}
+            className="productImage"
+            width={width}
+            height={height}
+          />
+          <div className="quickDescription">
+            <div className="productName">{productName}</div>
+            <div className="productPrice">$ {productPrice}</div>
+            <div className="productCategory">{productCategory}</div>
+          </div>
+        </div>
+      );
+    };
+
+Card.propTypes = {
+  cardType: PropTypes.string,
+  imageUrl: PropTypes.string,
+  altText: PropTypes.string,
+  title: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
+  productName: PropTypes.string,
+  productPrice: PropTypes.number,
+  productCategory: PropTypes.string,
+};
+
+export default Card;

@@ -1,30 +1,36 @@
 import React from "react";
-import '../../assets/buttonComponent.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-export class Button extends React.Component{
-   
-    render(){
-        if(this.props.text){
-            return (
-                <button className={this.props.className} onClick={this.props.clickFunction}>
-                    {this.props.text}
-                </button>
-            );
-        }
-        else if(this.props.icon){
-            return (
-                <button className={this.props.className} onClick={this.props.clickFunction}>
-                     <FontAwesomeIcon icon={this.props.icon} />
-                     </button>
-            );
-        }
-        else if(this.props.image){
-            return (
-                <button className={this.props.className} onClick={this.props.clickFunction}>
-                        <img src={this.props.image} alt="logo"></img>
-                    </button>
-            );
-        }
- 
-    }
-}
+import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../../assets/buttonComponent.css";
+
+const Button = ({ text, style, image, icon, onClickBtn }) => {
+  if (image) {
+    return (
+      <button className={style} onClick={onClickBtn}>
+        <img src={image} alt="logo"></img>
+      </button>
+    );
+  }
+  if (icon) {
+    return (
+      <button className={style} onClick={onClickBtn}>
+        <FontAwesomeIcon icon={icon} />
+      </button>
+    );
+  }
+  return (
+    <button className={style} onClick={onClickBtn}>
+      {text}
+    </button>
+  );
+};
+
+Button.propTypes = {
+  text: PropTypes.string,
+  style: PropTypes.string,
+  icon: PropTypes.object,
+  image: PropTypes.string,
+  onClickBtn: PropTypes.func,
+};
+
+export default Button;

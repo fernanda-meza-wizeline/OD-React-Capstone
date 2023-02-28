@@ -1,21 +1,34 @@
-import React from 'react';
-import '../../assets/slide.css';
-class Slide extends React.Component{
-     changeSlideState(slideState){
-        this.props.className=slideState;
-      }
-    render(){
-        
-        return(
-            <div className={this.props.class} >
-                <img className={this.props.class+"SlideImage"} src={this.props.imageUrl} alt={this.props.altText}  />           
-               <div className={this.props.class+"Block"}>
-                    <span className={this.props.class+"SlideTitle"}>{this.props.title}</span>
-                    <p className={this.props.class+"SlideDescription"}>{this.props.description} </p>
-                </div>
-            </div>
-        )
-    };
-}
+import React from "react";
+import PropTypes from 'prop-types';
+import "../../assets/slide.css";
 
+const Slide = (props) =>{
+
+    return (
+      <div className={props.class}>
+        <img
+          className={props.class + "SlideImage"}
+          src={props.imageUrl}
+          alt={props.altText}
+        />
+        <div className={props.class + "Block"}>
+          <span className={props.class + "SlideTitle"}>
+            {props.title}
+          </span>
+          <p className={props.class + "SlideDescription"}>
+            {props.description}{" "}
+          </p>
+        </div>
+      </div>
+    );
+};
+
+Slide.propTypes = {
+    className : PropTypes.string,
+    class : PropTypes.string,
+    imageUrl : PropTypes.string,
+    altText : PropTypes.string,
+    title : PropTypes.string,
+    description : PropTypes.string
+  };
 export default Slide;

@@ -1,23 +1,21 @@
-import './App.css';
-import  Logo from './assets/logo.svg';
-import Header from './components/headerComponent';
-import Footer from './components/footerComponent';
-import Slider from './components/slider/sliderComponent';
-import FeaturedBanners from './mocks/en-us/featured-banners.json';
-import FeaturedProducts from './components/featuredProductsComponent';
-import Categories from './mocks/en-us/product-categories.json';
-import Products from './mocks/en-us/featured-products.json';
-//import { useFeaturedBanners } from './utils/hooks/useFeaturedBanners';
+import React from "react";
+import Header from "./components/headerComponent";
+import Footer from "./components/footerComponent";
+import Slider from "./components/slider/sliderComponent";
+import FeaturedProducts from "./components/featuredProductsComponent";
+import "./App.css";
+import Logo from "./assets/logo.svg";
+import categoriesMock from "./mocks/en-us/product-categories.json";
+import featuredBannersMock from "./mocks/en-us/featured-banners.json";
+import featuredProductsMock from "./mocks/en-us/featured-products.json";
 
 function App() {
-  //const { data, isLoading } = useFeaturedBanners();
-
   return (
     <div className="App">
-      <Header className="header" logo={Logo}/>
-      <Slider featured={FeaturedBanners} />
-      <Slider categories={Categories} />
-      <FeaturedProducts products={Products} />
+      <Header className="header" logo={Logo} />
+      <Slider elements={featuredBannersMock.results} />
+      <Slider elements={categoriesMock.results} />
+      <FeaturedProducts products={featuredProductsMock} />
       <Footer />
     </div>
   );
