@@ -14,7 +14,6 @@ const Slider = ({ elements }) => {
 
   elements.forEach((banner, index) => {
     const title = banner.data.title ? banner.data.title : banner.data.name;
-
     const description = banner.data.description
       ? banner.data.description[0].text
       : "";
@@ -61,7 +60,7 @@ const Slider = ({ elements }) => {
           className="inner"
           style={{
             transform: `translateX(-${
-              activeIndex * (elements.type=='featured' ? 100 : 30)
+              activeIndex * (elements[0].type==='banner' ? 100 : 30)
             }%)`,
           }}
         >
