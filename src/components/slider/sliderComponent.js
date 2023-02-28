@@ -9,7 +9,6 @@ import "../../assets/slide.css";
 
 const Slider = ({ elements }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-
   var results = [];
   var dots = [];
 
@@ -24,7 +23,7 @@ const Slider = ({ elements }) => {
 
     results.push(
       <Slide
-        class={elements.type ? elements.type : ""}
+        class={banner.type}
         key={index}
         title={title}
         description={description}
@@ -62,7 +61,7 @@ const Slider = ({ elements }) => {
           className="inner"
           style={{
             transform: `translateX(-${
-              activeIndex * (elements.featured ? 100 : 30)
+              activeIndex * (elements.type=='featured' ? 100 : 30)
             }%)`,
           }}
         >

@@ -9,9 +9,9 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const Header = (props) =>{
     return (
       <header>
-        <Button className="image" image={props.logo} />
+        <Button style="image" image={props.logo} />
         <Search sIcon={faMagnifyingGlass} />
-        <Button className="icon" icon={faCartShopping} />
+        <Button style="icon" icon={faCartShopping} />
       </header>
     );
   }

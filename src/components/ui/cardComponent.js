@@ -18,8 +18,11 @@ const Card = ({cardType, imageUrl, altText, title, width, height, productName, p
         </div>
       );
     } 
+    else{
+
+
       return(
-        <div className="card">
+        <div className="productCard">
           <img
             src={imageUrl}
             alt={altText}
@@ -34,7 +37,8 @@ const Card = ({cardType, imageUrl, altText, title, width, height, productName, p
           </div>
         </div>
       );
-    };
+    }
+  };
 
 Card.propTypes = {
   cardType: PropTypes.string,

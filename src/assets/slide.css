@@ -56,7 +56,7 @@
  }
  
  .categorySlideTitle{
-     font-size: large;
+     font-size: x-large;
      margin-top: 50%;
      color:bisque;
  }
@@ -73,7 +73,7 @@
      border-radius: 10%;
  }
 
- 
+
 .arrows{
 width: 100%;
 position:relative;
@@ -144,7 +144,7 @@ color:#353a18;
 }
 
 .categorySlideTitle{
-    font-size: large;
+    font-size: x-large;
     margin-top: 50%;
     color:bisque;
 }
@@ -160,6 +160,8 @@ color:#353a18;
     white-space: normal;
     border-radius: 10%;
 }
-
+.category:hover .categoryBlock{
+    opacity:0.7;
+ }
 /* end style*/
 }
