@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./components/headerComponent";
-import Footer from "./components/footerComponent";
-import Slider from "./components/slider/sliderComponent";
+import Header from "./components/ui/Button/Layout/Header";
+import Footer from "./components/ui/Button/Layout/Footer";
+import Slider from "./components/Slider/Slider";
 import FeaturedProducts from "./components/featuredProductsComponent";
 import "./App.css";
 import Logo from "./assets/logo.svg";

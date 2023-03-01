@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import  Button  from "./ui/buttonComponent";
-import  Search  from "./forms/searchComponent";
+import  Button  from "../Button";
+import  Search  from "../../../forms/Search/Search";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 

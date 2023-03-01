@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import  Button  from "../ui/buttonComponent";
-import "../../assets/searchComponent.css";
+import  Button  from "../../ui/Button/Button";
+import "./Search.css";
 
 const Search = ({sIcon}) => {
   return (

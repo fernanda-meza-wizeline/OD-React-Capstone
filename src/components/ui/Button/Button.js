@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../assets/buttonComponent.css";
+import "./Button.css";
 
 const Button = ({ text, style, image, icon, onClickBtn }) => {
   if (image) {

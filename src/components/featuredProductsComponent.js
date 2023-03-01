@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Card  from "./ui/cardComponent";
+import Card  from "./Carousel/Card";
 import "../assets/featuredProductComponent.css";
 
 const FeaturedProducts = (props) => {

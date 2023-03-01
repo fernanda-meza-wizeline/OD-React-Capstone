@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
-import Slide from "./slideComponent.js";
-import "../../assets/slide.css";
+import Slide from "./Slide.js";
+import "./Slide.css";
 
 const Slider = ({ elements }) => {
   const [activeIndex, setActiveIndex] = useState(0);
