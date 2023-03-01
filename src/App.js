@@ -1,27 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import { useFeaturedBanners } from './utils/hooks/useFeaturedBanners';
+import React from "react";
+import Header from "./components/headerComponent";
+import Footer from "./components/footerComponent";
+import Slider from "./components/slider/sliderComponent";
+import FeaturedProducts from "./components/featuredProductsComponent";
+import "./App.css";
+import Logo from "./assets/logo.svg";
+import categoriesMock from "./mocks/en-us/product-categories.json";
+import featuredBannersMock from "./mocks/en-us/featured-banners.json";
+import featuredProductsMock from "./mocks/en-us/featured-products.json";
 
 function App() {
-  const { data, isLoading } = useFeaturedBanners();
-  console.log(data, isLoading);
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header className="header" logo={Logo} />
+      <Slider elements={featuredBannersMock.results} />
+      <Slider elements={categoriesMock.results} />
+      <FeaturedProducts products={featuredProductsMock} />
+      <Footer />
     </div>
   );
 }
