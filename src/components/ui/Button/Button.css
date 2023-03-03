@@ -15,6 +15,13 @@
     height: 30px;
 }
 .text{
+    border: none;
+    background-color: #8f5c38;
+    color: bisque;
+    font-size: medium;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     border-radius: 5px;
 }
 
