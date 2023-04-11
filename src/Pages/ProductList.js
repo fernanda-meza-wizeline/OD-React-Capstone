@@ -1,5 +1,7 @@
 import React, {useState} from "react";
+import "../assets/productListComponent.css";
 import FeaturedProducts from "../components/featuredProductsComponent";
+import Pagination from "../components/ui/Pagination/Pagination"
 import productsMock from "../mocks/en-us/products.json";
 import categoriesMock from "../mocks/en-us/product-categories.json";
 
@@ -34,6 +36,7 @@ function ProductList(){
              </div>
              <div className="productGrid">
               <FeaturedProducts category={filteredProducts?.[1]} products={productsMock} />
+              <Pagination postsPerPage={5} totalPosts={productsMock.results.length} paginate={true}/>
              </div>
          </div>
   );

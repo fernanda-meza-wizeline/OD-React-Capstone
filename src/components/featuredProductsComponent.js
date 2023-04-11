@@ -1,14 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Card  from "./Carousel/Card";
+//import Pagination from "./ui/Pagination/Pagination";
 import "../assets/featuredProductComponent.css";
 
 const FeaturedProducts = (props) => {
   let products = props.products.results;
-  if(props.category){
+  if(props.category!=undefined){
     products = products.filter(product => {
       return product.data.category.slug===props.category
     });
+  }else{
+    products = props.products.results;
   }
   return (
     <div className="featuredProducts">
@@ -28,7 +31,17 @@ const FeaturedProducts = (props) => {
                 height="300"
           />);
         }else{
-          return null;
+          return(
+            <Card
+              key={id}
+              cardType="product"
+              imageUrl={product.data.mainimage.url}
+              productName={product.data.name}
+              productCategory={product.data.category.slug}
+              productPrice={product.data.price}
+              width="300"
+              height="300"
+        />);
         }
       })}
       </div>
