@@ -1,21 +1,29 @@
-import React from "react";
-import Header from "./components/headerComponent";
-import Footer from "./components/footerComponent";
-import Slider from "./components/slider/sliderComponent";
-import FeaturedProducts from "./components/featuredProductsComponent";
+import React, {useState} from "react";
+import Header from "./components/ui/Layout/Header";
+import Footer from "./components/ui/Layout/Footer";
+import Home from "./Pages/Home";
+import ProductList from "./Pages/ProductList";
+import Button from "./components/ui/Button/Button";
 import "./App.css";
 import Logo from "./assets/logo.svg";
-import categoriesMock from "./mocks/en-us/product-categories.json";
-import featuredBannersMock from "./mocks/en-us/featured-banners.json";
-import featuredProductsMock from "./mocks/en-us/featured-products.json";
+
 
 function App() {
+
+  const useToggle = (initialState) => {
+    const [toggleValue, setToggleValue] = useState(initialState);
+
+    const toggler = () => { setToggleValue(!toggleValue) };
+    return [toggleValue, toggler]
+  };
+  
+  const [toggle, setToggle] = useToggle();
   return (
     <div className="App">
-      <Header className="header" logo={Logo} />
-      <Slider elements={featuredBannersMock.results} />
-      <Slider elements={categoriesMock.results} />
-      <FeaturedProducts products={featuredProductsMock} />
+      <Header className="header" logo={Logo} onClickBtn={setToggle}/>
+      {!toggle&& <Home />}
+      {!toggle&&<Button text="View All Products" style="text" onClickBtn={setToggle}/>}
+      {toggle&&<ProductList />}
       <Footer />
     </div>
   );

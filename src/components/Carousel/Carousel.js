@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import Card from "./cardComponent";
-import "../../assets/carousel.css";
+import Card from "../ui/Card";
+import "./Carousel.css";
 
 
 const Carousel = ({elements, cardType}) => {

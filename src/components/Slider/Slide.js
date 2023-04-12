@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import "../../assets/slide.css";
+import "./Slide.css";
 
 const Slide = (props) =>{
 

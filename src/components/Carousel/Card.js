@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../../assets/cardComponent.css";
+import "./Card.css";
 
 const Card = ({cardType, imageUrl, altText, title, width, height, productName, productPrice, productCategory}) => {
 
